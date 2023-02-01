@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QitKif</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        .pad-modif {
+            padding-left: 200px ;
+            padding-right: 200px ;
+        }
+        .txt-color-primary {
+            color: #1563B1 !important;
+        }
+        .txt-bold-primary {
+            font-weight: bold;
+        }
+        .txt-color-secondary {
+            color: #4BC2F2 !important;
+        }
+        .activated {
+            color: #4BC2F2 !important;
+        }
+
+        .center {
+            margin-top: 250px ;
+        }
+        .carousel-modif {
+            height: 600px ;
+            background-image: url('assets/images/image-bg.jpg') ;
+            background-size: cover ;
+            background-position: center ;
+            background-repeat: no-repeat ;
+        }
+        #mask {
+            width: 100% ;
+            height: 100% ;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+        }
+        #propos-image {
+            width: 100% ;
+            height: 400px ;
+            background-image: url('assets/images/image-bg.jpg') ;
+            background-size: cover ;
+            background-position: center ;
+            background-repeat: no-repeat ;
+        }
+
+        .reform-number {
+            font-size: 30px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav style="height: 100px ;" class="navbar navbar-expand-md bg-light fixed-top navbar-light pad-modif">
+        <!-- Brand -->
+        
+        <a class="navbar-brand" href="#"><img style="width: 150px ;" src="assets/images/logo.png" alt=""></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link txt-color-primary activated" href="#demo">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link txt-color-primary" href="#propos">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link txt-color-primary" href="#">Fonctionnement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link txt-color-primary" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link txt-color-primary" href="#">Témoignages</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link txt-color-primary" href="#">Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+
+    <!-- carousel -->
+    <div id="demo" style="margin-top: 100px;" class="carousel slide carousel-modif " data-ride="carousel">
+        <div id="mask"></div>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div  class="carousel-item active">
+                <h2 class="text-white text-center center">Sécurisée</h2>
+                <p class="text-white text-center text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="carousel-item">
+                <h2 class="text-white text-center center">Facile à utiliser</h2>
+                <p class="text-white text-center text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="carousel-item">
+                <h2 class="text-white text-center center">Portable</h2>
+                <p class="text-white text-center text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    <!-- A propos -->
+    <div  data-aos="fade-up" data-aos-delay="50" data-aos-duration="200" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" id="propos" class="container-fluid pad-modif">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="text-center txt-bold-primary txt-color-primary">Qui sommes nous ?</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class="text-justify txt-color-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
+                    
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- fonctionnement -->
+    <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="200" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" class="container-fluid pad-modif">
+        <div style="margin-top: 150px;" class="row">
+            <div class="col-md-12">
+                <h2 class="text-center txt-bold-primary txt-color-primary">Alors ? Comment ça marche vraiment ?</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">01</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">02</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">03</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">04</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">05</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">06</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">07</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">08</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
+                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    <!-- Blog -->
+    <div class="container-fluid pad-modif">
+        <div class="row" style="margin-top: 150px;">
+            <div class="col-md-12">
+                <h2 class="text-center txt-bold-primary txt-color-primary">Notre blog</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/image-bg.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title txt-bold-primary txt-color-primary">Comment devenir un pro ?</h4>
+                        <p class="card-text text-justify txt-color-primary">Acheteur: Une fois votre offre acceptée, votre paiement est sécurisé sur un compte ...</p>
+                        <a href="#" class="btn btn-primary">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/image-bg.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title txt-bold-primary txt-color-primary">Comment devenir un pro ?</h4>
+                        <p class="card-text text-justify txt-color-primary">Acheteur: Une fois votre offre acceptée, votre paiement est sécurisé sur un compte ...</p>
+                        <a href="#" class="btn btn-primary">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/image-bg.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title txt-bold-primary txt-color-primary">Comment devenir un pro ?</h4>
+                        <p class="card-text text-justify txt-color-primary">Acheteur: Une fois votre offre acceptée, votre paiement est sécurisé sur un compte ...</p>
+                        <a href="#" class="btn btn-primary">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pad-modif" style="height: 300px; background-color: rgba(75,194,242,0.07);">
+        <div class="row" style="margin-top: 150px;">
+            <div class="col-md-12">
+                <h2 class="text-center txt-bold-primary txt-color-primary">Ce que nos utilisateurs disent</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center txt-color-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. In harum beatae non adipisci </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pad-modif" style="height: 500px; background-color: #144F8B;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center txt-bold-primary txt-color-primary">Ce que nos utilisateurs disent</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pad-modif" style="height: 30px; background-color: #062F58;">
+        <div class="row">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
