@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QitKif</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .pad-modif {
             padding-left: 200px ;
             padding-right: 200px ;
@@ -22,12 +25,15 @@
         .txt-color-secondary {
             color: #4BC2F2 !important;
         }
-        .activated {
+        .active {
             color: #4BC2F2 !important;
         }
 
         .center {
             margin-top: 250px ;
+        }
+        .center-testimonials {
+            margin-top: 30px
         }
         .carousel-modif {
             height: 600px ;
@@ -35,6 +41,9 @@
             background-size: cover ;
             background-position: center ;
             background-repeat: no-repeat ;
+        }
+        .carousel-testimonials {
+            height: 200px ;
         }
         #mask {
             width: 100% ;
@@ -54,17 +63,28 @@
         .reform-number {
             font-size: 30px;
         }
-        
+        @media all and (max-width: 1127px) {
+            .pad-modif {
+                padding-left: 100px ;
+                padding-right: 100px ;
+            }
+        }
+        @media all and (max-width: 930px) {
+            .pad-modif {
+                padding-left: 20px ;
+                padding-right: 20px ;
+            }
+        }
     </style>
 
 </head>
-<body>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="100">
     
     <!-- Navbar -->
-    <nav style="height: 100px ;" class="navbar navbar-expand-md bg-light fixed-top navbar-light pad-modif">
+    <nav id="myScrollspy"  class="navbar navbar-expand-md bg-light fixed-top navbar-light pad-modif">
         <!-- Brand -->
         
-        <a class="navbar-brand" href="#"><img style="width: 150px ;" src="assets/images/logo.png" alt=""></a>
+        <a id="logo" class="navbar-brand" href="#"><img style="width: 150px ;" src="assets/images/logo.png" alt=""></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -75,23 +95,23 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link txt-color-primary activated" href="#demo">Accueil</a>
+                    <a class="nav-link txt-color-primary active clicker-menu" href="#demo">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link txt-color-primary" href="#propos">A propos</a>
+                    <a class="nav-link txt-color-primary clicker-menu" href="#propos">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link txt-color-primary" href="#">Fonctionnement</a>
+                    <a class="nav-link txt-color-primary clicker-menu" href="#fonctionnement">Fonctionnement</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link txt-color-primary" href="#">Blog</a>
+                    <a class="nav-link txt-color-primary clicker-menu" href="#blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link txt-color-primary" href="#">Témoignages</a>
+                    <a class="nav-link txt-color-primary clicker-menu" href="#demo-testimonials">Témoignages</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link txt-color-primary" href="#">Nous contacter</a>
+                    <a class="nav-link txt-color-primary clicker-menu" href="#contacts">Nous contacter</a>
                 </li>
             </ul>
         </div>
@@ -125,16 +145,16 @@
 
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <span style="padding-left: 0px;margin-left: 200px;" class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <span style="padding-left: 0px;margin-right: 200px;" class="carousel-control-next-icon"></span>
         </a>
 
     </div>
 
     <!-- A propos -->
-    <div  data-aos="fade-up" data-aos-delay="50" data-aos-duration="200" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" id="propos" class="container-fluid pad-modif">
+    <div id="propos" class="container-fluid pad-modif">
         <div class="row mt-5">
             <div class="col-md-12">
                 <h2 class="text-center txt-bold-primary txt-color-primary">Qui sommes nous ?</h2>
@@ -151,8 +171,8 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos, ea reiciendis nemo magnam reprehenderit dolorum ut sunt ipsam nam, laboriosam possimus voluptate tempora suscipit itaque. Maiores praesentium optio corporis.
-                    
                 </p>
+                <button class="btn btn-primary">Lire la suite</button>
             </div>
         </div>
         
@@ -160,7 +180,7 @@
 
 
     <!-- fonctionnement -->
-    <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="200" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" class="container-fluid pad-modif">
+    <div id="fonctionnement" class="container-fluid pad-modif">
         <div style="margin-top: 150px;" class="row">
             <div class="col-md-12">
                 <h2 class="text-center txt-bold-primary txt-color-primary">Alors ? Comment ça marche vraiment ?</h2>
@@ -173,9 +193,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">01</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                <p><span class="txt-bold-primary txt-color-primary reform-number">01</span> <span class="txt-color-primary text-justify txt-bold-primary">QitKif est une application de transaction sécurisée et facile à utiliser</span></p>
+                <p class="txt-color-primary text-justify">Protégez (enfin) vos achats et ventes entre particulier pour éviter les arnaques, garantir la qualité convenue et changer nos habitudes de consommation.
+                    L’application est simple et facile d’utilisation.
+                    
                 </p>
             </div>
         </div>
@@ -184,43 +205,9 @@
 
         <div class="row mt-5">
             <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">02</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
-                </p>
-            </div>
-
-            <div class="col-md-6">
-                <div id="propos-image" class="bg-primary">
-
-                </div>
-            </div>
-            
-        </div>
-
-
-
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <div id="propos-image" class="bg-primary">
-
-                </div>
-            </div>
-            <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">03</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
-                </p>
-            </div>
-        </div>
-
-
-
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">04</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                <p><span class="txt-bold-primary txt-color-primary reform-number">02</span> <span class="txt-color-primary text-justify txt-bold-primary">QitKif, L'application idéale pour faire affaire avec un inconnu. Tout ce dont j'ai besoin pou le bon déroulement de mes transactions.</span></p>
+                <p class="txt-color-primary text-justify">
+                    La confiance et la sécurité sont la base de QitKif.
                 </p>
             </div>
 
@@ -233,6 +220,7 @@
         </div>
 
 
+
         <div class="row mt-5">
             <div class="col-md-6">
                 <div id="propos-image" class="bg-primary">
@@ -240,9 +228,8 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">05</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                <p><span class="txt-bold-primary txt-color-primary reform-number">03</span> <span class="txt-color-primary text-justify txt-bold-primary">Je crée un compte et je me connecte facilement</span></p>
+                <p class="txt-color-primary text-justify">La simplicité se cette application commence par la création facile d’un compte. Cette application intuitive est parfaite en tout genre.
                 </p>
             </div>
         </div>
@@ -251,9 +238,9 @@
 
         <div class="row mt-5">
             <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">06</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                <p><span class="txt-bold-primary txt-color-primary reform-number">04</span> <span class="txt-color-primary text-justify txt-bold-primary">J'envoie mon offre d'achat ou de vente sécurisé</span></p>
+                <p class="txt-color-primary text-justify">Acheteur : Une fois la perle rare dénichée, laissez-vous guider pour envoyer votre offre d’achat sécurisé depuis l’application. <br>
+                    Vendeur : Une fois prêt à vendre votre bien, laissez-vous guider pour éditer votre lien de paiement sécurisé depuis l’application.
                 </p>
             </div>
 
@@ -273,9 +260,11 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">07</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                <p><span class="txt-bold-primary txt-color-primary reform-number">05</span> <span class="txt-color-primary text-justify txt-bold-primary">L'acheteur sécurise son paiement et le vendeur est assuré d'être payé</span></p>
+                <p class="txt-color-primary text-justify">
+                    Acheteur : Une fois votre offre acceptée, votre paiement est sécurisé sur un compte jusqu’à validation de la transaction. Vous êtes assuré de recevoir votre achat ! <br>
+Vendeur : Une fois votre offre acceptée, le paiement de l’acheteur est sécurisé sur un compte bancaire jusqu’à la livraison.
+
                 </p>
             </div>
         </div>
@@ -284,9 +273,49 @@
 
         <div class="row mt-5">
             <div class="col-md-6">
-                <p><span class="txt-bold-primary txt-color-primary reform-number">08</span> <span class="txt-color-primary text-justify txt-bold-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsa cum quibusdam eius corrupti dolore labore architecto, rerum doloribus! Animi porro repudiandae aut tempora nostrum quaerat, illo aperiam eius sapiente.</span></p>
-                <p class="txt-color-primary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni totam adipisci consequuntur debitis laborum incidunt similique a quo eum ad, maiores est dicta nulla, beatae repellat impedit delectus quae? Nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur, provident in voluptatum a officiis nihil, quibusdam quidem id dolorem, illo temporibus ad aperiam magnam minus aut sequi libero mollitia!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam qui natus molestias officiis neque magni commodi eum accusamus magnam, soluta, molestiae fuga, nam unde dolore placeat odio facilis similique pariatur!
+                <p><span class="txt-bold-primary txt-color-primary reform-number">06</span> <span class="txt-color-primary text-justify txt-bold-primary">Je récupère mon achat.</span></p>
+                <p class="txt-color-primary text-justify">
+                    Acheteur : Une fois le colis livré, vous disposez de 12h pour le récupérer et vérifier que votre achat est conforme à vos attentes. En cas de problème, vous pouvez formuler une réclamation depuis votre compte, nous vous accompagnerons pour trouver une solution. <br>
+Vendeur : Vous disposez d’un jour pour expédier le colis à l’acheteur en respectant nos consignes de livraison.
+
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="propos-image" class="bg-primary">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">07</span> <span class="txt-color-primary text-justify txt-bold-primary">Je finalise ma transaction.</span></p>
+                <p class="txt-color-primary text-justify">Acheteur : Votre achat est conforme à vos attentes, vous n’avez plus qu’à valider votre transaction depuis l’application. <br>
+                    Vendeur : Une fois la transaction validée par l’acheteur, les fonds sont alors débloqués et immédiatement reversés sur votre porte-monnaie.
+                    
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <p><span class="txt-bold-primary txt-color-primary reform-number">08</span> <span class="txt-color-primary text-justify txt-bold-primary">QitKif protège en cas de litige l'acheteur ou le vendeur.</span></p>
+                <p class="txt-color-primary text-justify">
+                    Si la transaction ne se déroule pas comme prévue, je me laisse guider pour trouver une solution rapide et juste. <br>
+-	Facile et sans assistance requise <br>
+-	Rapide et sans frais supplémentaires <br>
+-	Transparent et protecteur de mes intérêts <br>
+
                 </p>
             </div>
 
@@ -302,10 +331,10 @@
 
 
     <!-- Blog -->
-    <div class="container-fluid pad-modif">
+    <div id="blog" class="container-fluid pad-modif">
         <div class="row" style="margin-top: 150px;">
             <div class="col-md-12">
-                <h2 class="text-center txt-bold-primary txt-color-primary">Notre blog</h2>
+                <h2 class="text-center txt-bold-primary txt-color-primary" >Notre blog</h2>
             </div>
         </div>
         <div class="row mt-5">
@@ -342,10 +371,10 @@
         </div>
     </div>
 
-    <div class="container-fluid pad-modif" style="height: 300px; background-color: rgba(75,194,242,0.07);">
+    <!-- <div class="container-fluid pad-modif" style="height: 300px; background-color: rgba(75,194,242,0.07);">
         <div class="row" style="margin-top: 150px;">
             <div class="col-md-12">
-                <h2 class="text-center txt-bold-primary txt-color-primary">Ce que nos utilisateurs disent</h2>
+                <h2 class="text-center txt-bold-primary txt-color-primary align-middle">Ce que nos utilisateurs disent</h2>
             </div>
         </div>
         <div class="row">
@@ -353,19 +382,103 @@
                 <p class="text-center txt-color-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. In harum beatae non adipisci </p>
             </div>
         </div>
+    </div> -->
+
+    <!-- carousel -->
+    <div id="demo-testimonials" style="margin-top: 100px; background-color: rgba(75, 194, 242,0.07) !important;" class="carousel slide carousel-testimonials" data-ride="carousel">
+        <h2 style="padding-top: 20px;" class="text-center txt-bold-primary txt-color-primary">Ce que nos utilisateurs disent</h2>
+        <div id=""></div>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo-testimonials" style="border: 1px solid #1563B1;" data-slide-to="0" class="active"></li>
+            <li data-target="#demo-testimonials" style="border: 1px solid #1563B1;" data-slide-to="1"></li>
+            <li data-target="#demo-testimonials" style="border: 1px solid #1563B1;" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div  class="carousel-item active">
+                <!-- <h2 class="text-white text-center center-testimonials">Sécurisée</h2> -->
+                <p class="text-white text-center text-justify txt-color-primary center-testimonials">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+            <div class="carousel-item">
+                <!-- <h2 class="text-white text-center center-testimonials">Facile à utiliser</h2> -->
+                <p class="text-white text-center text-justify txt-color-primary center-testimonials">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+            <div class="carousel-item">
+                <!-- <h2 class="text-white text-center center-testimonials">Portable</h2> -->
+                <p class="text-white text-center text-justify txt-color-primary center-testimonials">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a> -->
+
     </div>
 
-    <div class="container-fluid pad-modif" style="height: 500px; background-color: #144F8B;">
+    <div id="contacts" class="container-fluid pad-modif py-5" style=" background-color: #144F8B;">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center txt-bold-primary txt-color-primary">Ce que nos utilisateurs disent</h2>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-white">Adresse</h3>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <img src="assets/images/location.png" style="width: 35px;" alt="">
+                                <span class="text-white ml-2">Behoririka, II N 59 FV</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <h3 class="text-white">Télecharger l'application</h3>
+                        <a href=""><img src="assets/images/google-play-badge.svg" style="width: 135px;" alt=""></a>
+                        <a href=""><img src="assets/images/app-store-badge.svg" style="width: 135px;" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-white">Nous contacter</h3>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <img src="assets/images/facebook.png" style="width: 35px;" alt="">
+                        <a href=""><span class="text-white ml-2">QitKif</span></a>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <img src="assets/images/whatsapp.png" style="width: 35px;" alt="">
+                        <a href=""><span class="text-white ml-2">+261 34 83 687 71</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-white">Nous ecrire</h3>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <form action="" class="form-group">
+                            <label class="text-white" for="">Email</label>
+                            <input type="text" style="margin-top: -5px ;" class="form-control mb-2">
+                            <label class="text-white" for="">Message</label>
+                            <textarea style="margin-top: -5px ;" class="form-control mb-2"></textarea>
+                            <input type="submit" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="container-fluid pad-modif" style="height: 30px; background-color: #062F58;">
         <div class="row">
             <div class="col-md-12">
-                
+                <p class="text-white text-center">Powered by <a href="https://nir-info.mg">Nir'info</a></p>
             </div>
         </div>
     </div>
@@ -374,9 +487,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+    <script src="assets/js/app.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <!-- <script>
       AOS.init();
-    </script>
+    </script> -->
 </body>
 </html>
